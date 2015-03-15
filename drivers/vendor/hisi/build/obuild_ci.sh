@@ -120,7 +120,7 @@ function build_product()
 	date
 	echo ok > ${WORKSPACE}/dummy.txt
 	rm -rf  ${WORKSPACE}/*
-	export USE_CCACHE="1"
+	#export USE_CCACHE="1"
 	cd ${BALONG_TOPDIR}
 	mkdir -p ./build/delivery/${PRODUCT_NAME}/log
 	echo "GERRIT_CHANGE_ID=${GERRIT_CHANGE_ID}" > ./build/delivery/${PRODUCT_NAME}/log/change_info.log

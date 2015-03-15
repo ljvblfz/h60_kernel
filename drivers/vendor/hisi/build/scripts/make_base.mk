@@ -94,9 +94,9 @@ OBB_SYNC_SOURCE_DIR      := $(BALONG_TOPDIR)
 OBB_SYNC_DESTINATION_DIR := /cygdrive/e/$(OBB_USERNAME)/$(OBB_PRODUCT_NAME)
 
 # config ccache
-ifneq ($(USE_CCACHE),)
-CCACHE :=$(BALONG_TOPDIR)/build/tools/ccache/ccache
-endif
+#ifneq ($(USE_CCACHE),)
+#CCACHE :=$(BALONG_TOPDIR)/build/tools/ccache/ccache
+#endif
 
 #linux distcc
 #ifneq ($(distcc-acore),true)

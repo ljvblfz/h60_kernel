@@ -83,8 +83,8 @@ def main():
 			sys.exit(1)
 		
 		# config ccache
-		cfg_cmd=top_dir + "/build/tools/ccache/ccache -M 30G"
-		os.system(cfg_cmd)
+		#cfg_cmd=top_dir + "/build/tools/ccache/ccache -M 30G"
+		#os.system(cfg_cmd)
 		
 		#Define whether is strip version	
 		build_dir      = top_dir + r'/build'
@@ -145,7 +145,7 @@ def main():
 				os.environ['ROOT_WIND_PATH_W'] = 'D:/WindRiver'
 			else:
 				os.environ['ROOT_WIND_PATH_W'] = ''
-				print 'Failed to guess WindRiver Home path. please set env ROOT_WIND_PATH_W or WIND_HOME'
+				#print 'Failed to guess WindRiver Home path. please set env ROOT_WIND_PATH_W or WIND_HOME'
 				#usage()
 				#sys.exit(-1)
 				
@@ -182,8 +182,8 @@ def main():
 		print ">> Output log to " +logfile + " ..."
 
 		# jobs
-		if not params_dict.has_key('-j'):
-			params_string += " -j 20 "
+		#if not params_dict.has_key('-j'):
+		#	params_string += " -j 8"
 			
 		cmd = "make " + params_string 
 		
@@ -222,6 +222,7 @@ def main():
 			cmd = top_dir + "/build/tools/coverity/bin/cov-build --dir "  + tqe_tmp_dir + " --encoding UTF-8 " + cmd
 		
 		save_argv_to_file(file_obuild_cmd, my_argv)
+
 		errcode =os.system(cmd)
 
 		if params_dict.has_key('FORTIFY') and params_dict['FORTIFY']=='true' :

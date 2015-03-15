@@ -455,7 +455,7 @@ function help()
 function jenkins_project_config()
 {
 	# configure obuild system
-	export USE_CCACHE=1
+	#export USE_CCACHE=1
 	export PATH=$HOME/bin:$PATH
 	export param_extra=""
 	export jenkins_url_env=http://10.106.40.215:8082/

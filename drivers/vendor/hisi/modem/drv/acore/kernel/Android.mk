@@ -7,9 +7,9 @@ TARGET_PREBUILT_KERNEL := $(KERNEL_OUT)/arch/arm/boot/zImage
 BALONG_ARCH := arm 
 BALONG_CROSS_COMPILE :=$(shell pwd)/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6/bin/arm-linux-androideabi-
 
-ifneq ($(USE_CCACHE),)
-BALONG_CROSS_COMPILE :="$(shell pwd)/prebuilts/misc/linux-x86/ccache/ccache $(BALONG_CROSS_COMPILE)"
-endif
+#ifneq ($(USE_CCACHE),)
+#BALONG_CROSS_COMPILE :="$(shell pwd)/prebuilts/misc/linux-x86/ccache/ccache $(BALONG_CROSS_COMPILE)"
+#endif
 
 ifeq ($(distcc),true)
 BALONG_CROSS_COMPILE :=/opt/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6/bin/arm-linux-androideabi-
